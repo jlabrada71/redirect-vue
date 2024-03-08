@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "URL Blocker",
+    "version": "1.9",
+    "description": "Blocks specific URLs and opens a new tab with a message.",
+    "permissions": ["tabs", "webNavigation", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "URL Blocker",
+      "default_popup": "index.html"
+    }
+  }
