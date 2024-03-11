@@ -16,6 +16,13 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: './extension'
-  }
+    outDir: './extension',
+    rollupOptions: {
+      input: {
+        popup: fileURLToPath(new URL('./popup.html', import.meta.url)),
+        redirect: fileURLToPath(new URL('./redirect.html', import.meta.url)),
+       
+      },
+    },
+  },
 })
